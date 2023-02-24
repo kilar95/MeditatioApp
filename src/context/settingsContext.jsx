@@ -5,8 +5,7 @@ const SettingsContext = createContext({})
 function SettingsProvider(props) {
     const [isOpen, setIsOpen] = useState(false);
     const [duration, setDuration] = useState(2)
-    const [sound, setSound] = useState('brownNoise')
-    const [volume, setVolume] = useState(50)
+    const [sound, setSound] = useState('music')
 
 
     return (
@@ -18,9 +17,7 @@ function SettingsProvider(props) {
                     duration,
                     setDuration,
                     sound,
-                    setSound,
-                    volume,
-                    setVolume
+                    setSound
                 }}>
                 {props.children}
             </SettingsContext.Provider>

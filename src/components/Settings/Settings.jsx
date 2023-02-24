@@ -3,11 +3,7 @@ import { DarkModeContext } from '../../context/darkModeContext'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
 
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
-import VolumeDown from '@mui/icons-material/VolumeDown';
-import VolumeUp from '@mui/icons-material/VolumeUp';
+
 import { SettingsContext } from '../../context/settingsContext';
 
 
@@ -27,10 +23,6 @@ const Settings = () => {
   const handleSoundChange = (e) => {
     settingsInfo.setSound(e.target.value)
   }
-
-  const handleVolumeChange = (event, newValue) => {
-    settingsInfo.setVolume(newValue);
-  };
 
   return (
     <div className={darkMode ? "settingsTab dark" : "settingsTab light"}>
@@ -69,35 +61,19 @@ const Settings = () => {
               value={settingsInfo.sound}
               onChange={handleSoundChange}
             >
-              <option value="brownNoise">Brown Noise</option>
+              <option value="music">Relaxing Music</option>
+              <option value="fireplace">Fireplace</option>
               <option value="forest">Forest</option>
               <option value="rain">Rain</option>
+              <option value="river">River</option>
               <option value="beach">Beach</option>
+              <option value="brownNoise">Brown Noise</option>
             </select>
           </div>
 
-          <div className='singleSetting'>
-            <span>Volume:</span>
-            <Box sx={{ width: 170 }}>
-              <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                <VolumeDown />
-                <Slider
-                  aria-label="Volume"
-                  value={settingsInfo.volume}
-                  onChange={handleVolumeChange}
-                  sx={{
-                    color: '#74b757',
-                  }}
-                />
-                <VolumeUp />
-              </Stack>
-            </Box>
-          </div>
         </div>
-
       </div>
     </div>
-    // </Modal >
   )
 }
 

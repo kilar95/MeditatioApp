@@ -8,14 +8,14 @@ import { SettingsContext } from '../../context/settingsContext'
 
 
 
-const TopBar = () => {
+const TopBar = ({ setIsPlaying }) => {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
     const { setIsOpen } = useContext(SettingsContext)
 
     function openSettings() {
+        setIsPlaying(false)
         setIsOpen(true)
     }
-
 
     return (
         <div className={darkMode ? "topBar dark" : "topBar light"}>

@@ -6,6 +6,7 @@ import { DarkModeContext } from './context/darkModeContext';
 import { SettingsContext } from './context/settingsContext';
 import { useContext, useState, useEffect, useRef, useMemo } from 'react';
 import Settings from './components/Settings/Settings';
+import Sound from './components/Sound';
 
 function App() {
   const { darkMode } = useContext(DarkModeContext)
@@ -32,7 +33,7 @@ function App() {
         return;
       }
       setSeconds(prev => prev - 1);
-    }, 100)
+    }, 1000)
   }
 
   useEffect(() => {
@@ -78,12 +79,15 @@ function App() {
     isPlayingRef.current = false
   }
 
+
   return (
     <div className={darkMode ? 'App dark' : 'App light'}>
       {settingsInfo.isOpen &&
         <Settings />
       }
-      <TopBar />
+      <TopBar
+        setIsPlaying={setIsPlaying}
+      />
       <Timer
         percentage={percentage}
         minutesLeft={minutesLeft}
@@ -94,6 +98,11 @@ function App() {
         setIsPlaying={setIsPlaying}
         isPlayingRef={isPlayingRef}
         reset={resetTimer}
+      />
+      <Sound
+        isPlaying={isPlaying}
+        secondsLeft={secondsLeft}
+        minutesLeft={minutesLeft}
       />
     </div>
   );
