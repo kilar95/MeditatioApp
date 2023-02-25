@@ -3,9 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 /* General  */
-html,
-body {
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  /* color: #e2e2e2da; */
+}
+
+body {
   font-family: "Inter", sans-serif;
 }
 
@@ -17,12 +25,24 @@ body {
   overflow: hidden;
   gap: 3rem;
   height: 100vh;
-  color: #777;
+  /* color: #777;
+  color: #548341 */
 }
 
 .dark {
+  position: relative;
   background: #202020;
   color: #e2e2e2;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .light {
@@ -36,9 +56,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 /* Topbar and Bottombar */
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(350px, 30vw);
+  background: transparent;
+  z-index: 10;
+}
 
 .topBar > div > svg,
 .bottomBar > div > svg {
@@ -51,18 +81,16 @@ body {
   transform: scale(1.2);
 }
 
-.topBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: min(350px, 30vw);
-}
-
 .bottomBar {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3rem;
+  z-index: 10;
+}
+
+.MuiSvgIcon-root {
+  color: #fff;
 }
 
 /* Settings */
@@ -72,6 +100,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
 }
 
 .settingsBox {
@@ -81,7 +110,7 @@ body {
   transform: translate(-50%, -50%);
 
   width: min(300px, 70vw);
-  height: min(300px, 55vh);
+  height: min(350px, 55vh);
 
   border: 4px solid #202020;
   background-color: #e2e2e2;
@@ -91,7 +120,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.5rem;
   font-weight: bold;
   padding-block: 30px;
 }
@@ -127,7 +156,7 @@ body {
 }
 
 .singleSetting > span {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .singleSetting > select {
@@ -135,4 +164,23 @@ body {
   border: 2px solid #74b757;
   border-radius: 10px;
   font-size: 16px;
+}
+
+/* Button  */
+
+.button {
+  padding: 10px 20px;
+  width: 70px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fafafa;
+  cursor: pointer;
+  background-color: #202020;
+  transition: 0.1s all ease-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
