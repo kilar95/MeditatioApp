@@ -162,7 +162,6 @@ function App() {
       <TopBar
         setIsPlaying={setIsPlaying}
         isPlayingRef={isPlayingRef}
-      // isPlaying={isPlaying}
       />
       <Timer
         percentage={percentage}
