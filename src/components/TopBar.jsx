@@ -5,14 +5,12 @@ import { MdDarkMode } from 'react-icons/md'
 import { MdLightMode } from 'react-icons/md'
 import { IconContext } from "react-icons";
 import { SettingsContext } from '../context/settingsContext'
-import { useRef } from 'react'
 
 
 
 const TopBar = ({ setIsPlaying, isPlayingRef }) => {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
     const { setIsOpen } = useContext(SettingsContext)
-    // const isPlayingRef = useRef(isPlaying)
 
     function openSettings() {
         setIsPlaying(false)
@@ -25,7 +23,7 @@ const TopBar = ({ setIsPlaying, isPlayingRef }) => {
             <IconContext.Provider
                 value={{
                     size: "40px",
-                    color: "#ffffff"
+                    color: darkMode ? "#ffffff" : "#3e3e42"
                 }}>
                 <div>
                     <RiSettings3Fill onClick={openSettings} />

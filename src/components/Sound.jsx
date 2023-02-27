@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useMemo, useRef, createRef } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { SettingsContext } from "../context/settingsContext";
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -59,11 +59,11 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
                     <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
                         <VolumeDown />
                         <Slider
-                            // aria-label="Volume"
+                            aria-label="Volume"
                             value={volume}
                             onChange={handleVolumeChange}
                             sx={{
-                                color: '#ffff',
+                                color: '#69c4c5'
                             }}
                         />
                         <VolumeUp />

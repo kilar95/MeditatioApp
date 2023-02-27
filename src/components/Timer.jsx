@@ -10,9 +10,9 @@ const Timer = ({ percentage, minutesLeft, secondsLeft }) => {
     let seconds = secondsLeft
     if (secondsLeft < 10) seconds = '0' + secondsLeft
 
-    // useEffect(() => {
-    //     darkMode ? setTextColor("#e2e2e2da") : setTextColor("#3e3e42")
-    // }, [darkMode])
+    useEffect(() => {
+        darkMode ? setTextColor("#ffffff") : setTextColor("#3e3e42")
+    }, [darkMode])
 
     return (
         <div className='timer'>
@@ -21,8 +21,8 @@ const Timer = ({ percentage, minutesLeft, secondsLeft }) => {
                 text={minutesLeft + ':' + seconds}
                 styles={buildStyles({
                     textSize: '16px',
-                    textColor: `#fff`,
-                    pathColor: '#e2e2e2d0',
+                    textColor: `${textColor}`,
+                    pathColor: '#69c4c5',
                     trailColor: '#777',
                 })}
             />

@@ -8,23 +8,7 @@ import { useContext, useState, useEffect, useRef, useMemo } from 'react';
 import Settings from './components/Settings';
 import Sound from './components/Sound';
 
-import fireplace from './images/fireplace.jpg'
-import fireplaceNight from './images/fireplaceNight.jpg'
-import forest from './images/forest.jpg'
-import forestNight from './images/forestNight.jpg'
-import music from './images/music.jpg'
-import musicDark from './images/musicDark.jpg'
-import rain from './images/rain.jpg'
-import rainDark from './images/rainDark.jpg'
-import river from './images/river.jpg'
-import riverDark from './images/riverDark.jpg'
-import beach from './images/beach.jpg'
-import beachDark from './images/beachDark.jpg'
-import day from './images/day.jpg'
-import brownNoiseDark from './images/brownNoiseDark.jpg'
-
-import greenWave from './images/green_wave.png'
-
+import logo from './images/logo.png'
 
 function App() {
   const { darkMode } = useContext(DarkModeContext)
@@ -97,65 +81,19 @@ function App() {
     isPlayingRef.current = false
   }
 
-  // Background Image
-  const [background, setBackground] = useState('')
-
-  useEffect(() => {
-
-    switch (settingsInfo.sound) {
-      case ('forest'):
-        darkMode ?
-          setBackground(`url(${forestNight})`) :
-          setBackground(`url(${forest})`)
-        break;
-      case ('fireplace'):
-        darkMode ?
-          setBackground(`url(${fireplaceNight})`) :
-          setBackground(`url(${fireplace})`)
-        break;
-      case ('rain'):
-        darkMode ?
-          setBackground(`url(${rainDark})`) :
-          setBackground(`url(${rain})`)
-        break;
-      case ('river'):
-        darkMode ?
-          setBackground(`url(${riverDark})`) :
-          setBackground(`url(${river})`)
-        break;
-      case ('beach'):
-        darkMode ?
-          setBackground(`url(${beachDark})`) :
-          setBackground(`url(${beach})`)
-        break;
-      case ('music'):
-        darkMode ?
-          setBackground(`url(${musicDark})`) :
-          setBackground(`url(${music})`)
-        break;
-      case ('brownNoise'):
-        darkMode ?
-          setBackground(`url(${brownNoiseDark})`) :
-          setBackground(`url(${day})`)
-        break;
-      default:
-        setBackground(`url(${music})`)
-
-    }
-  }, [darkMode, settingsInfo])
-
-
 
   return (
     <div
       className={darkMode ? 'App dark' : 'App light'}
       style={{
-        backgroundImage: `${background}`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
+      <div className='logo'>
+        <img src={logo} alt="logo" />
+      </div>
       {settingsInfo.isOpen &&
         <Settings />
       }
@@ -179,6 +117,10 @@ function App() {
         secondsLeft={secondsLeft}
         minutesLeft={minutesLeft}
       />
+
+      <div className='logo2'>
+        <img src={logo} alt="logo" />
+      </div>
     </div>
   );
 }

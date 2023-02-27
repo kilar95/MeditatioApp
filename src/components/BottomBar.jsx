@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { IconContext } from 'react-icons'
 import { DarkModeContext } from '../context/darkModeContext'
 import { AiFillPauseCircle } from 'react-icons/ai'
@@ -14,8 +14,8 @@ const BottomBar = ({ isPlaying, setIsPlaying, isPlayingRef, reset }) => {
             <IconContext.Provider
                 value={{
                     size: "50px",
-                    color: "#ffffff"
-                }}>
+                    color: darkMode ? "#ffffff" : "#3e3e42"
+                }} >
                 <div>
                     {isPlaying ?
                         <AiFillPauseCircle
