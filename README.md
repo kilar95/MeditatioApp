@@ -69,6 +69,7 @@ You can try the web app on Netlify, clicking on the following link: <a href= "ht
 - [![React][react.js]][react-url]
 - <a href="https://reactrouter.com/en/main">React Router</a>
 - <a href="https://react-icons.github.io/react-icons/"> React-icons</a>
+- <a href="https://mui.com/material-ui/getting-started/overview/"> Material UI</a>
 
 <!-- GETTING STARTED -->
 
