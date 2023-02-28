@@ -18,7 +18,6 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
     useEffect(() => {
         setUrl(`./sounds/${sound}.mp3`)
         audioFile.current.load()
-        audioFile.current.volume = 0.5
     }, [sound, url])
 
 
@@ -30,7 +29,7 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
             } else {
                 if (secondsLeft <= FADE_OUT_TIME) {
                     const intervalId = setInterval(() => {
-                        audioFile.current.volume = audioFile.current.volume - 0.1;
+                        audioFile.current.volume -= 0.1;
                     }, 100);
                     return () => {
                         clearInterval(intervalId);
@@ -40,7 +39,7 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
         } else {
             audioFile.current.pause();
         }
-        return () => audioFile.current.volume = 0.5
+        audioFile.current.volume = 0.5
     }, [isPlaying, minutesLeft, secondsLeft])
 
     const handleVolumeChange = (event, newValue) => {

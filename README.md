@@ -22,7 +22,7 @@
     <a href="https://github.com/kilar95/MeditationApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://city-score.netlify.app/">View Demo</a>
+    <a href="https://meditate-timer-app.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/kilar95/MeditationApp/issues">Report Bug</a>
     ·
@@ -60,7 +60,7 @@
 ![Product Name Screen Shot][product-screenshot]
 
 This project was created for the start2impact React course. <br>
-You can try the web app on Netlify, clicking on the following link: <a href= "https://city-score.netlify.app/"> Meditation App</a>
+You can try the web app on Netlify, clicking on the following link: <a href= "https://meditate-timer-app.netlify.app"> Meditation App</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +136,7 @@ Don't forget to give the project a star! Thanks again!
 
 Ilaria Bertoldi - [Linkedin](https://www.linkedin.com/in/ilaria-bertoldi-837a20176/)
 
-Project Link: [https://city-score.netlify.app/](https://city-score.netlify.app/)
+Project Link: [https://meditate-timer-app.netlify.app](https://meditate-timer-app.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,7 +148,6 @@ Use this space to list resources you find helpful and would like to give credit 
 
 - [Img Shields](https://shields.io)
 - [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
 - [Best README Template](https://github.com/othneildrew/Best-README-Template#readme)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
