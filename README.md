@@ -57,7 +57,7 @@
 
 ## About The Project
 
-![Product Name Screen Shot][product-screenshot]
+<img src="https://user-images.githubusercontent.com/104167965/221936691-2ab0fe29-4a8c-4908-bf8a-009c92f2005a.PNG" width="600">
 
 This project was created for the start2impact React course. <br>
 You can try the web app on Netlify, clicking on the following link: <a href= "https://meditate-timer-app.netlify.app"> Meditation App</a>
@@ -103,8 +103,6 @@ After installing Node you are ready to go!
 
 Use the timer and the available sounds to meditate, or simply relax.
 Change the settings in order to listen to 7 different sounds or to change the duration of the timer.
-
-<img src="https://user-images.githubusercontent.com/104167965/214049346-772f7569-96d0-46c9-814c-ddacbbb285b3.PNG" width="600">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
