@@ -18,11 +18,9 @@ body {
 
 .App {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  gap: 3rem;
   height: 100vh;
   position: relative;
 }
@@ -60,13 +58,31 @@ body {
   width: 100%;
 }
 
+/* Home */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home > h1 {
+  font-size: 40px;
+}
+
+.home > h3 {
+  margin-top: 10px;
+}
+
 /* timer */
 
 .timer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  gap: 3rem;
 }
 
 /* Topbar and Bottombar */

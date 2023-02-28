@@ -9,15 +9,16 @@ import VolumeUp from '@mui/icons-material/VolumeUp';
 
 const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
     const { sound } = useContext(SettingsContext)
-    const [url, setUrl] = useState('../sounds/music.mp3')
+    const [url, setUrl] = useState('./sounds/music.mp3')
     const [volume, setVolume] = useState(50)
 
     const audioFile = useRef(null)
     const FADE_OUT_TIME = 2;
 
     useEffect(() => {
-        setUrl(`../sounds/${sound}.mp3`)
+        setUrl(`./sounds/${sound}.mp3`)
         audioFile.current.load()
+        audioFile.current.volume = 0.5
     }, [sound, url])
 
 
@@ -32,7 +33,6 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
                         audioFile.current.volume = audioFile.current.volume - 0.1;
                     }, 100);
                     return () => {
-                        audioFile.current.volume = 0.5
                         clearInterval(intervalId);
                     };
                 }
@@ -40,6 +40,7 @@ const Sound = ({ isPlaying, secondsLeft, minutesLeft }) => {
         } else {
             audioFile.current.pause();
         }
+        return () => audioFile.current.volume = 0.5
     }, [isPlaying, minutesLeft, secondsLeft])
 
     const handleVolumeChange = (event, newValue) => {

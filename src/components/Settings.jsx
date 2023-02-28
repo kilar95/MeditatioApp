@@ -58,7 +58,7 @@ const Settings = () => {
               value={settingsInfo.sound}
               onChange={handleSoundChange}
             >
-              <option value="music">Relaxing Music</option>
+              <option value="music">Chants</option>
               <option value="fireplace">Fireplace</option>
               <option value="forest">Forest</option>
               <option value="rain">Rain</option>
