@@ -109,7 +109,7 @@ Change the settings in order to listen to 7 different sounds or to change the du
 
 ## Resources
 
-- [react-circular-progressbar](https://github.com/kevinsqi/react-circular-progressbar), used this react component to make the seek for audio.
+- [react-circular-progressbar](https://github.com/kevinsqi/react-circular-progressbar)
 - All sounds were downloaded from https://pixabay.com/ and belong to their respective owners.
 
 <!-- CONTRIBUTING -->
